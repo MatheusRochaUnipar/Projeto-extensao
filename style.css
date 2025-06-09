@@ -1,0 +1,502 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #01060c;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    background-color: #01060c;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho_div {
+    position: relative;
+    left: 150px;
+}
+
+.cabecalho_nav {
+    position: relative;
+    left: 500px;
+}
+
+.cabecalho_imagem {
+    width: 170px;
+}
+
+.cabecalho_item {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 25px 0 0 ;
+}
+
+/* 1. Seção - Sobre */
+
+.sobre {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url("imagens/sobre_fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}
+
+.sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.sobre > * {
+    position: relative;
+    z-index: 2;
+}
+
+.sobre_div {
+    position: relative;
+    left: 160px;
+}
+
+.sobre_titulo {
+    color: #db580a;
+    font-size: 48px;
+}
+
+.sobre_texto {
+    color: white;
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+}
+
+.sobre_botao {
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    background: linear-gradient(to right, rgb(235, 106, 0) 30% , rgb(237, 174, 0));
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.1s ease-in-out;
+}
+
+.sobre_botao:hover{
+    background: linear-gradient(to right, rgb(255, 121, 12) 30% , rgb(255, 190, 11) );
+}
+
+/* 2.Seção - Carrosel */
+
+.carrosel {
+    position: relative; 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: left;
+}
+
+.carrosel_cards {
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+.carrosel_botoes {
+    width: 600px;
+    height: 50px;
+    position: absolute;
+    bottom: 90px;
+    left: 37%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.carrosel_botao {
+    width: 60px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right, rgb(235, 106, 0) 30% , rgb(237, 174, 0));
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.1s ease-in-out;
+}
+
+.carrosel_botao:hover{
+    background: linear-gradient(to right, rgb(255, 121, 12) 30% , rgb(255, 190, 11) );
+}
+
+.carrosel_card_ativo {
+    background-color: white;
+    border-radius: 20px;
+    width: 480px;
+    height: 580px;
+    display: block;
+}
+
+.carrosel_card_desativo {
+    display: none;
+}
+
+.carrosel_imagem {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 52%;
+}
+
+.carrosel_card_titulo {
+    margin: 20px 0px 10px 15px;
+    color: #db580a;
+    font-size: 28px;
+}
+
+.carrosel_card_texto {
+    margin: 0px 0px 0px 15px;
+    color: gray;
+    font-size: 20px;
+}
+
+.carrosel_conteudo {
+    margin: auto;
+    color: white;
+}
+
+.carrosel_conteudo_titulo {
+    color: #db580a;
+    font-size: 36px;
+}
+
+.carrosel_conteudo_texto {
+    text-align: justify;
+    font-size: 22px;
+    margin: 0 110px 0 0px;
+}
+
+/* 3.Seção - Dados */
+
+.dados {
+    position: relative;
+    background-image: url("imagens/dados_fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 120vh;
+}
+
+.dados::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.dados > * {
+    position: relative;
+    z-index: 2;
+}
+
+.dados_titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #db580a;
+    padding: 50px 0px 0px 0px;
+}
+
+.dados_div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 60px auto;
+    justify-content: center;
+}
+
+.dados_linha1 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 30px auto;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+}
+
+.dados_linha2 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.dados_div_conteudo {
+    width: 320px;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dados_div_conteudo:hover {
+    transform: scale(1.01);
+}
+
+.dados_div_h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.dados_div_p {
+    font-size: 25px;
+    color: #ccc;
+}
+
+/* 4.Seção - Casos */
+
+.card{
+    width: 70%;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 5%;
+    text-align: justify;
+    border: 3px solid;
+    border-image: linear-gradient(to bottom right,rgb(255, 198, 9), rgb(255, 64, 0)) 1;
+    transform: scale(1);
+    transition: 0.6s ease;  
+    background-color: rgb(224, 224, 224);
+    padding: 2%;
+}
+
+.card_imagem {
+    width: 100%;
+    height: 40%;
+}
+
+.card:hover{
+    transform: scale(1.02);
+    border-image: linear-gradient(to bottom right,  rgb(255, 64, 0), rgb(255, 165, 9)) 1;
+}
+
+.textos{
+    text-align: left;
+    width: 100%;
+    color: rgb(69, 69, 69);
+}
+
+.numeracaocasos{
+    color: rgb(0, 74, 82);
+}
+
+.textocasos{
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.casos_acontecidos{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 2600px;    
+}
+
+.cardscasos{
+    padding: 20;
+    display: flex;
+    justify-content: center;    
+    height: 100%;
+}
+
+.cardsclicaveis{
+    width: 400PX;
+    height: 650px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    border-radius: 1%;
+    transform: scale(1);
+    transition: 0.6s;
+    margin: 20px;
+    margin-top: 100px;
+    position: relative;
+}   
+
+.cardtext{
+    margin: 10% 10% 10% 10%;
+    font-size:large;
+}
+
+.cardtext2{
+    margin-top: 5%;
+    font-weight: 200;
+    font-size: medium;
+}
+
+.cardsclicaveis:hover{
+    transform: scale(1.01);
+}
+
+.imagenscards{
+    width: 100%;
+    height: 50%;
+}
+
+.botãosaibamais{
+    font-size: small;
+    font-weight: 300;
+    background: linear-gradient(to right, rgb(235, 106, 0) 30% , rgb(237, 174, 0));
+    border-radius: 3px;
+    color: rgb(255, 251, 231);
+    cursor: pointer;
+    margin-top: 10%;
+    border: none;
+    padding: 3% 10% 3% 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 125px;
+    transition: background 0.1s ease-in-out;
+}
+
+.botãosaibamais:hover{
+    background: linear-gradient(to right, rgb(255, 121, 12) 30% , rgb(255, 190, 11) );
+}
+
+.cards{
+    height: 80%;
+}
+
+.botãovoltar{
+    margin: 2% 0 2% 26.8%;
+    padding: 0.5% 4% 0.5% 4%;
+    background: linear-gradient(to right, rgb(235, 106, 0) 30% , rgb(237, 174, 0));
+    color: beige;
+    transform: scale(1);
+    transition: 0.5;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.botãovoltar:hover{
+    background: linear-gradient(to right, rgb(230, 123, 35) 30% , rgb(230, 187, 69));
+    transform: scale(1.03);
+}
+
+/* 5.Seção - Video */
+
+.video {
+    position: relative;
+    top: 200px;
+    left: 320px;
+    height: 500px;
+    aspect-ratio: 16/9;
+}
+
+.sectionvideo {
+    position: relative;
+    min-height: 100vh;
+}
+
+.sectionvideo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.sectionvideo > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* 6.Seção - Conclusão */
+
+.textofinal{
+    color: rgb(209, 209, 209);
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.finalizacao_explicativas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url("imagens/conclusao_fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+}
+
+.finalizacao_explicativas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.finalizacao_explicativas > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Rodape */
+
+.rodape{
+    height: 10%;
+    background-image: linear-gradient(to bottom right, rgb(20, 20, 20), rgb(26, 26, 26), rgb(16, 16, 16));
+}
+
+.textfooter{
+    padding-top: 2%;
+    text-align: center;
+    color: rgb(213, 213, 213);
+    font-weight: 500;
+}
